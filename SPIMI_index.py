@@ -41,7 +41,7 @@ def docid_to_int(docid_str):
 # - Fit and transform the 100 documents
 # - Reconstruct binary postings lists from the sparse matrix
 # - Store postings in a dictionary: term -> set(docIDs)
-# ---------------------------------------------------------*/
+# ---------------------------------------------------------
 def build_partial_index(doc_ids, texts):
     vectorizer = CountVectorizer(stop_words='english', binary=True)
     X = vectorizer.fit_transform(texts)  # shape (n_docs, n_terms)
